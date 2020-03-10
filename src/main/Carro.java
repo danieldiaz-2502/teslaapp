@@ -11,9 +11,9 @@ public class Carro {
 		PApplet app;
 		
 		public Carro(int posX, int posY, PApplet app) {
-			this.posX = posX;
-			this.posY = posY;
-			this.tam = 10;
+			this.precio = posX;
+			this.velocidad = posY;
+			this.resistencia = 10;
 			this.vel = 5;
 			this.app = app;
 		}
