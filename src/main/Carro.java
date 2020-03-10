@@ -19,13 +19,6 @@ public class Carro {
 		}
 		
 		public void pintar() {
-			disparar();
+			
 		}
-		
-		public void disparar () {
-			app.fill(250,0,0);
-			app.ellipse(this.posX - 24, this.posY, this.tam, this.tam);
-			this.posY -= this.vel;
-		}
-
 }
