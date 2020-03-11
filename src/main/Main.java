@@ -32,6 +32,7 @@ public class Main extends PApplet {
 	PImage modeloSinfo;
 	PImage modelo3info;
 	PImage pantallaPago;
+	Model3 modelo3;
 	
 	
 	public static void main(String[] args) {
@@ -70,6 +71,7 @@ public class Main extends PApplet {
 		modelo3info = loadImage("img/modelo3info.png");
 		modeloSinfo = loadImage("img/modeloSinfo.png");
 		pantallaPago = loadImage("img/pantallaPago.png");
+		modelo3 = new Model3(50, 0, 50, this);
 	}
 	
     public void draw() {
@@ -154,6 +156,7 @@ public class Main extends PApplet {
     		if (desplegarMenu == true) {
     			image(menuDesplegable,0,35,190,250);
         	}
+    		modelo3.comparaVel();
     		break;
     	case 8:
     		background(250);
@@ -164,6 +167,10 @@ public class Main extends PApplet {
         	}
     		break;
     	}
+    	
+    	fill(0);
+    	textSize(29);
+    	text("x="+mouseX+"y="+mouseY,mouseX,mouseY);
     	
     }
     public void mousePressed() {
@@ -209,6 +216,7 @@ public class Main extends PApplet {
     	//para realizar la opcion de comparar el modelo Tesla
     	if(mouseX > 35 && mouseX < 35 + 122 && mouseY <30 + 546 && mouseY > 546 && (pantalla == 3 || pantalla == 4 || pantalla == 5 || pantalla == 6)) {
     		pantalla = 7;
+    		modelo3.setVelocidad(0);
     		desplegarMenu=false;
     	}
     	if(mouseX > 179 && mouseX < 179 + 122 && mouseY <30 + 546 && mouseY > 546 && (pantalla == 3 || pantalla == 4 || pantalla == 5 || pantalla == 6)) {
