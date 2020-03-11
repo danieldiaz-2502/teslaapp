@@ -193,9 +193,6 @@ public class Main extends PApplet {
     	if(mouseX < 122 + 90 && mouseX > 122 && mouseY < 380 +30 && mouseY > 380) {
 			pantalla = 1;
 		}
-    	if(mouseX < 40 + 50 && mouseX > 40 && mouseY < 270 + 55 && mouseY > 270) {
-			pantalla = 2;
-		}
     	//para que aparezcan las opciones
     	if(mouseX < 50 && mouseX > 0 && mouseY < 35 && mouseY > 0) {
 			desplegarMenu = true;
@@ -216,15 +213,38 @@ public class Main extends PApplet {
 			desplegarMenu=false;
 			// se hace enfansis en el pantalla == 2 para que solo se pueda realizar la accion en esa pantalla
 		}
-    
+    	if(mouseX < 40 + 50 && mouseX > 40 && mouseY < 270 + 55 && mouseY > 270) {
+			pantalla = 2;
+		}
     	break;
     	case 2:
-    		if(mouseX < 340 && mouseX > 0 && mouseY < 124 + 188 && mouseY > 188 && pantalla == 2) {
+    		if(mouseX < 340 && mouseX > 0 && mouseY < 124 + 188 && mouseY > 188) {
     			pantalla = 4;
     			desplegarMenu=false;
     		}
-    		if(mouseX < 50 && mouseX > 0 && mouseY < 35 && mouseY > 0) {
-    			desplegarMenu = true;
+    		break;
+    	case 3:
+    		if(mouseX < 190 && mouseX > 0 && mouseY < 190 + 35 && mouseY > 190 && desplegarMenu == true) {
+    			pantalla = 2;
+    			desplegarMenu=false;
+    		}
+    		break;
+    	case 4:
+    		if(mouseX < 190 && mouseX > 0 && mouseY < 190 + 35 && mouseY > 190 && desplegarMenu == true) {
+    			pantalla = 2;
+    			desplegarMenu=false;
+    		}
+    		break;
+    	case 5:
+    		if(mouseX < 190 && mouseX > 0 && mouseY < 190 + 35 && mouseY > 190 && desplegarMenu == true) {
+    			pantalla = 2;
+    			desplegarMenu=false;
+    		}
+    		break;
+    	case 6:
+    		if(mouseX < 190 && mouseX > 0 && mouseY < 190 + 35 && mouseY > 190 && desplegarMenu == true) {
+    			pantalla = 2;
+    			desplegarMenu=false;
     		}
     		break;
     }
