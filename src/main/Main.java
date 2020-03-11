@@ -77,8 +77,6 @@ public class Main extends PApplet {
 		pantallaComparacion = loadImage("img/paginaComparacion.png");
 		modelo3 = new Model3(38500,0,0,this);
 		otroModelo = new Otro(0,0,0,this);
-		cp5.addTextfield("nombre").setPosition(111,271).setSize(147,26).setAutoClear(false);
-		cp5.addTextfield(" ").setPosition(111,323).setSize(147,26).setAutoClear(false);
 	}
 	
     public void draw() {
