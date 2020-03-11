@@ -181,10 +181,6 @@ public class Main extends PApplet {
     		break;
     	}
     	
-    	fill(0);
-    	textSize(29);
-    	text("x="+mouseX+"y="+mouseY,mouseX,mouseY);
-    	
     }
     public void mousePressed() {
     	if(mouseX < 30 + 280 && mouseX > 30 && mouseY < 31 + 220 && mouseY > 31 && pantalla == 1 && desplegarMenu == false) {
