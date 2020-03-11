@@ -16,13 +16,15 @@ public class Carro {
 			this.app = app;
 		}
 		public void comparaVel(){
-			app.rect(50,300,50,velocidad);
+			app.rect(104,265,20,velocidad);
 			this.velocidad -= 5;
-			if(this.velocidad <= -100) {
-				this.velocidad = -100;
+			if(this.velocidad <= -this.velocidad) {
+				this.velocidad = -this.velocidad;
 			}
 		}
-
+		
+		
+		
 		public int getPrecio() {
 			return precio;
 		}

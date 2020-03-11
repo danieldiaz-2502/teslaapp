@@ -32,6 +32,7 @@ public class Main extends PApplet {
 	PImage modeloSinfo;
 	PImage modelo3info;
 	PImage pantallaPago;
+	PImage pantallaComparacion;
 	Model3 modelo3;
 	
 	
@@ -71,7 +72,8 @@ public class Main extends PApplet {
 		modelo3info = loadImage("img/modelo3info.png");
 		modeloSinfo = loadImage("img/modeloSinfo.png");
 		pantallaPago = loadImage("img/pantallaPago.png");
-		modelo3 = new Model3(50, 0, 50, this);
+		pantallaComparacion = loadImage("img/paginaComparacion.png");
+		modelo3 = new Model3(104,265,100,this);
 	}
 	
     public void draw() {
@@ -83,8 +85,8 @@ public class Main extends PApplet {
     		if(mouseX < 122 + 90 && mouseX > 122 && mouseY < 380 +30 && mouseY > 380) {
     			image(ingresarClaro,122,380,90,30);
     		}
-    		
-    		rect(179,546,122,30);
+    		/*image(pantallaComparacion,0,0,340,600);
+    		rect(104,265,20,-100);*/
     		break;
     	
     	case 1:
@@ -152,11 +154,14 @@ public class Main extends PApplet {
     		break;
     	case 7:
     		background(250);
+    		image(pantallaComparacion,0,0,340,600);
     		image(parteArriba,0,0,340,35);
+    		noStroke();
+    		fill(250,0,0);
+    		modelo3.comparaVel();
     		if (desplegarMenu == true) {
     			image(menuDesplegable,0,35,190,250);
         	}
-    		modelo3.comparaVel();
     		break;
     	case 8:
     		background(250);
