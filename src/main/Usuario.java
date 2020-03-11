@@ -1,11 +1,10 @@
 package main;
 
 public class Usuario {
-	private String username, contrasenia,email;
-	public Usuario(String username, String contrasenia, String email) {
+	private String username, contrasenia;
+	public Usuario(String username, String contrasenia) {
 		this.username = username;
 		this.contrasenia = contrasenia;
-		this.email = email;
 	}
 	public String getUsername() {
 		return username;
@@ -18,12 +17,6 @@ public class Usuario {
 	}
 	public void setContrasenia(String contrasenia) {
 		this.contrasenia = contrasenia;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
 	}
 	
 }
