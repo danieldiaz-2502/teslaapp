@@ -205,19 +205,29 @@ public class Main extends PApplet {
 			//para que el menu vuelva a su estado inicial y se pueda ver la interfaz
 			desplegarMenu=false;
 		}
+    	if(mouseX < 340 && mouseX > 0 && mouseY < 124 + 50 && mouseY > 50 && pantalla == 2) {
+			pantalla = 3;
+			desplegarMenu=false;
+		}
+    	switch(pantalla) {
+    	case 1:
     	if(mouseX < 190 && mouseX > 0 && mouseY < 190 + 35 && mouseY > 190 && desplegarMenu == true) {
 			pantalla = 2;
 			desplegarMenu=false;
 			// se hace enfansis en el pantalla == 2 para que solo se pueda realizar la accion en esa pantalla
 		}
-    	if(mouseX < 340 && mouseX > 0 && mouseY < 124 + 50 && mouseY > 50 && pantalla == 2) {
-			pantalla = 3;
-			desplegarMenu=false;
-		}
-    	/*if(mouseX < 340 && mouseX > 0 && mouseY < 124 + 188 && mouseY > 188 && pantalla == 2) {
-			pantalla = 4;
-			desplegarMenu=false;
-		}*/
+    
+    	break;
+    	case 2:
+    		if(mouseX < 340 && mouseX > 0 && mouseY < 124 + 188 && mouseY > 188 && pantalla == 2) {
+    			pantalla = 4;
+    			desplegarMenu=false;
+    		}
+    		if(mouseX < 50 && mouseX > 0 && mouseY < 35 && mouseY > 0) {
+    			desplegarMenu = true;
+    		}
+    		break;
+    }
     	if(mouseX < 340 && mouseX > 0 && mouseY < 124 + 323 && mouseY > 323 && pantalla == 2) {
 			pantalla = 5;
 			desplegarMenu=false;
