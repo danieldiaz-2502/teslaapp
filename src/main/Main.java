@@ -35,6 +35,7 @@ public class Main extends PApplet {
 	PImage pantallaComparacion;
 	Model3 modelo3;
 	Otro otroModelo;
+	Usuario usuario;
 	
 	
 	public static void main(String[] args) {
@@ -77,6 +78,8 @@ public class Main extends PApplet {
 		pantallaComparacion = loadImage("img/paginaComparacion.png");
 		modelo3 = new Model3(38500,0,0,this);
 		otroModelo = new Otro(0,0,0,this);
+		fill(0);
+		cp5.addTextfield("nombre").setPosition(111,271).setSize(100,24).setAutoClear(false);
 	}
 	
     public void draw() {
