@@ -50,6 +50,7 @@ public class Main extends PApplet {
 		cp5 = new ControlP5(this);
 		pantalla = 0;
 		desplegarMenu = false;
+		//imagenes para las pantallas y opciones
 		inicio = loadImage("img/INICIO.png");
 		ingresar = loadImage("img/ingresar.png");
 		ingresarClaro = loadImage("img/ingresarN.png");
@@ -160,6 +161,7 @@ public class Main extends PApplet {
     		image(parteArriba,0,0,340,35);
     		noStroke();
     		fill(250,0,0);
+    		//funciones para hacer la comparacion con las gráficas
     		modelo3.comparaVel();
     		modelo3.comparaResis();
     		fill(100);
@@ -227,6 +229,7 @@ public class Main extends PApplet {
     	//para realizar la opcion de comparar el modelo Tesla
     	if(mouseX > 35 && mouseX < 35 + 122 && mouseY <30 + 546 && mouseY > 546 && (pantalla == 3 || pantalla == 4 || pantalla == 5 || pantalla == 6)) {
     		pantalla = 7;
+    		//para reiniciar el valor de las graficas a 0 y que se repita la animacion cada vez que ingrese a esa opcion
     		modelo3.setVelocidad(0);
     		modelo3.setResistencia(0);
     		otroModelo.setVelocidad(0);
